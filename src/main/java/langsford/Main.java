@@ -44,9 +44,11 @@ public class Main {
     private static void displayHelp() {
         System.out.println("grandchildren [options] filename");
         System.out.println("Options:");
-        System.out.println("-u\t\tUnique Spouse Lists." +
-                "\n\t\t\tAssume lists of children for spouses are identical.");
-        System.out.println("-h\t\tHelp\n\t\t\tDisplay this help screen.");
+        System.out.println("-u\t\t\t\t\tUnique Spouse Lists." +
+                "\n\t\t\t\t\tssume lists of children for spouses are identical.\n");
+        System.out.println("-h\t\t\t\t\tHelp\n\t\t\t\t\tDisplay this help screen.\n");
+        System.out.println("-f <filename> \t\tUnique Spouse Lists." +
+                "\n\t\t\t\t\tAssume lists of children for spouses are identical.\n");
     }
 
 
