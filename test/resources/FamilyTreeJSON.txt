@@ -1,0 +1,768 @@
+[
+    {
+        "id": 0,
+        "name": "Tanisha Hall",
+        "spouseId": 1,
+        "childrenIds": [
+            3,
+            4,
+            6,
+            8,
+            10
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Charmaine Ware",
+        "spouseId": 0,
+        "childrenIds": [
+            3,
+            4,
+            6,
+            8,
+            10
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ashley William",
+        "spouseId": 3,
+        "childrenIds": []
+    },
+    {
+        "id": 3,
+        "name": "Randall Guzman",
+        "spouseId": 2,
+        "childrenIds": []
+    },
+    {
+        "id": 4,
+        "name": "Daniels Franco",
+        "spouseId": 5,
+        "childrenIds": [
+            11
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Jacklyn Mccormick",
+        "spouseId": 4,
+        "childrenIds": [
+            11
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Mcneil House",
+        "spouseId": 7,
+        "childrenIds": []
+    },
+    {
+        "id": 7,
+        "name": "Kimberly Cochran",
+        "spouseId": 6,
+        "childrenIds": []
+    },
+    {
+        "id": 8,
+        "name": "Ginger Dorsey",
+        "spouseId": 9,
+        "childrenIds": [
+            16,
+            17
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Raymond Mayer",
+        "spouseId": 8,
+        "childrenIds": [
+            16,
+            17
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Newton Barron",
+        "spouseId": 20,
+        "childrenIds": [
+            21
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Janet Brennan",
+        "spouseId": 12,
+        "childrenIds": [
+            13,
+            14,
+            15
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Peters Mcdaniel",
+        "spouseId": 11,
+        "childrenIds": [
+            13,
+            14,
+            15
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Roseann Santana",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 14,
+        "name": "Manning Cleveland",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 15,
+        "name": "Mclaughlin Brooks",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 16,
+        "name": "Knapp Velasquez",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 17,
+        "name": "Padilla Conrad",
+        "spouseId": 18,
+        "childrenIds": [
+            19
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Sandoval Short",
+        "spouseId": 17,
+        "childrenIds": [
+            19
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Mamie Huff",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 20,
+        "name": "Lamb Hawkins",
+        "spouseId": 10,
+        "childrenIds": [
+            21
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Leta Parsons",
+        "spouseId": 22,
+        "childrenIds": [
+            23
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Lyons Burton",
+        "spouseId": 21,
+        "childrenIds": [
+            23
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Coleman Leonard",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 24,
+        "name": "Lorie Ramsey",
+        "spouseId": 25,
+        "childrenIds": [
+            20,
+            27,
+            31,
+            33
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Carlene Barker",
+        "spouseId": 24,
+        "childrenIds": [
+            20,
+            27,
+            31,
+            33
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Vanessa Mack",
+        "spouseId": 27,
+        "childrenIds": [
+            28
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Zimmerman Sawyer",
+        "spouseId": 26,
+        "childrenIds": [
+            28
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Concepcion Meyer",
+        "spouseId": 29,
+        "childrenIds": [
+            30
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Branch Grant",
+        "spouseId": 28,
+        "childrenIds": [
+            30
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Brittany Bryan",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 31,
+        "name": "Franco Carney",
+        "spouseId": 32,
+        "childrenIds": [
+            34,
+            35,
+            40,
+            42,
+            46,
+            47
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Rosales Ballard",
+        "spouseId": 31,
+        "childrenIds": [
+            34,
+            35,
+            40,
+            42,
+            46,
+            47
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Iva Finley",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 34,
+        "name": "Constance Bird",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 35,
+        "name": "Wilkinson Jenkins",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 36,
+        "name": "Kellie Klein",
+        "spouseId": 37,
+        "childrenIds": [
+            38
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Aguilar Horton",
+        "spouseId": 36,
+        "childrenIds": [
+            38
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Combs Richard",
+        "spouseId": 39,
+        "childrenIds": [
+            41
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Judy Perry",
+        "spouseId": 38,
+        "childrenIds": [
+            41
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Teri Vincent",
+        "spouseId": 41,
+        "childrenIds": [
+            43,
+            44,
+            45
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Green Dejesus",
+        "spouseId": 40,
+        "childrenIds": [
+            43,
+            44,
+            45
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Davidson Dixon",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 43,
+        "name": "Boyer Wheeler",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 44,
+        "name": "Clarissa Trujillo",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 45,
+        "name": "Lois Norton",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 46,
+        "name": "Elva Cook",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 47,
+        "name": "Valerie Byrd",
+        "spouseId": 53,
+        "childrenIds": [
+            55,
+            56,
+            57,
+            58,
+            59
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Thelma Puckett",
+        "spouseId": 49,
+        "childrenIds": [
+            50,
+            51
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Lina English",
+        "spouseId": 48,
+        "childrenIds": [
+            50,
+            51
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Eliza Gilliam",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 51,
+        "name": "Brenda Patton",
+        "spouseId": 52,
+        "childrenIds": [
+            53,
+            54
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Elba Cooper",
+        "spouseId": 51,
+        "childrenIds": [
+            53,
+            54
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Irene Dyer",
+        "spouseId": 47,
+        "childrenIds": [
+            55,
+            56,
+            57,
+            58,
+            59
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Butler Glover",
+        "spouseId": 60,
+        "childrenIds": [
+            61,
+            62
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Keri Saunders",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 56,
+        "name": "Josephine Reese",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 57,
+        "name": "Aisha Fleming",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 58,
+        "name": "Bernadette Bonner",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 59,
+        "name": "Martin Black",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 60,
+        "name": "Mack Blevins",
+        "spouseId": 54,
+        "childrenIds": [
+            61,
+            62
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Sherman Calderon",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 62,
+        "name": "Gallegos Kim",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 63,
+        "name": "Rosemary Sullivan",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 64,
+        "name": "Zamora Delgado",
+        "spouseId": 67,
+        "childrenIds": [
+            65,
+            66
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Solis Benjamin",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 66,
+        "name": "Reed Estes",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 67,
+        "name": "Christensen Bass",
+        "spouseId": 64,
+        "childrenIds": [
+            65,
+            66
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Gibbs Prince",
+        "spouseId": 69,
+        "childrenIds": [
+            60,
+            63,
+            67,
+            70
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Harris Donaldson",
+        "spouseId": 68,
+        "childrenIds": [
+            60,
+            63,
+            67,
+            70
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Cooper Jacobson",
+        "spouseId": 73,
+        "childrenIds": [
+            71
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Molly Sanford",
+        "spouseId": 72,
+        "childrenIds": []
+    },
+    {
+        "id": 72,
+        "name": "Florine Emerson",
+        "spouseId": 71,
+        "childrenIds": []
+    },
+    {
+        "id": 73,
+        "name": "Kerri Livingston",
+        "spouseId": 70,
+        "childrenIds": [
+            71
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Isabelle Steele",
+        "spouseId": 76,
+        "childrenIds": [
+            73,
+            75,
+            77
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Olga Velazquez",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 76,
+        "name": "Meadows Cantrell",
+        "spouseId": 74,
+        "childrenIds": [
+            73,
+            75,
+            77
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Shelley Guy",
+        "spouseId": 78,
+        "childrenIds": []
+    },
+    {
+        "id": 78,
+        "name": "Celia Marshall",
+        "spouseId": 77,
+        "childrenIds": []
+    },
+    {
+        "id": 79,
+        "name": "Jennie Terry",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 80,
+        "name": "Cummings Reeves",
+        "spouseId": 81,
+        "childrenIds": [
+            78,
+            79
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Orr Collins",
+        "spouseId": 80,
+        "childrenIds": [
+            78,
+            79
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Mckenzie Crawford",
+        "spouseId": 83,
+        "childrenIds": [
+            86,
+            88,
+            90,
+            93,
+            94
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Marilyn Swanson",
+        "spouseId": 82,
+        "childrenIds": [
+            86,
+            88,
+            90,
+            93,
+            94
+        ]
+    },
+    {
+        "id": 84,
+        "name": "West Austin",
+        "spouseId": 85,
+        "childrenIds": [
+            91
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Ivy Kline",
+        "spouseId": 84,
+        "childrenIds": [
+            91
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Lynn Gonzalez",
+        "spouseId": 87,
+        "childrenIds": []
+    },
+    {
+        "id": 87,
+        "name": "Sears Case",
+        "spouseId": 86,
+        "childrenIds": []
+    },
+    {
+        "id": 88,
+        "name": "Quinn Ingram",
+        "spouseId": 89,
+        "childrenIds": []
+    },
+    {
+        "id": 89,
+        "name": "Hollie Martinez",
+        "spouseId": 88,
+        "childrenIds": []
+    },
+    {
+        "id": 90,
+        "name": "Farmer Mcleod",
+        "spouseId": 91,
+        "childrenIds": [
+            92
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Kathy Herring",
+        "spouseId": 90,
+        "childrenIds": [
+            92
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Katie Mcdonald",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 93,
+        "name": "Hewitt Bryant",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 94,
+        "name": "Rosario Rosario",
+        "spouseId": 95,
+        "childrenIds": []
+    },
+    {
+        "id": 95,
+        "name": "Wright Miller",
+        "spouseId": 94,
+        "childrenIds": []
+    },
+    {
+        "id": 96,
+        "name": "Gay Sutton",
+        "spouseId": 97,
+        "childrenIds": [
+            95
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Flossie Lindsay",
+        "spouseId": 96,
+        "childrenIds": [
+            95
+        ]
+    }
+]
