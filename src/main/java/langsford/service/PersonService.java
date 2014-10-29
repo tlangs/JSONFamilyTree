@@ -69,4 +69,24 @@ public final class PersonService {
 
         return grandchildren.toArray(new Person[grandchildren.size()]);
     }
+
+    /**
+     * Get rid of all spouses in the list
+     * @param people Array of people to look for spouses in
+     * @return Array of people with no spouses
+     */
+    public static Person[] sameChildrenLists(Person[] people) {
+        Map<Integer, Person> personMap = toMap(people);
+        List<Person> noSpouses = new ArrayList<>();
+        for (Person p : people) {
+            if (personMap.containsKey(p.getId()) && personMap.containsKey(p.getSpouseId())) {
+                int[] childrenList = p.getChildrenIds();
+                int[] spouseChildrenList = personMap.get(p.getSpouseId()).getChildrenIds();
+                if (Arrays.equals(childrenList, spouseChildrenList)) {
+                    personMap.remove(p.getSpouseId());
+                }
+            }
+        }
+        return personMap.values().toArray(new Person[personMap.size()]);
+    }
 }
