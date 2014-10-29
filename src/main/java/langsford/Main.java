@@ -47,7 +47,7 @@ public class Main {
     }
 
     private static void displayHelp() {
-        System.out.println("grandchildren [options] filename");
+        System.out.println("grandchildren [options] -f filename");
         System.out.println("Options:");
         System.out.println("-i\t\t\t\tIdentical Spouse Lists." +
                 "\n\t\t\t\tAssume lists of children for spouses are identical.\n");
