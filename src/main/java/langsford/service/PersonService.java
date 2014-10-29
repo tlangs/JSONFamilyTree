@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * Created by Trevyn Langsford on 10/28/2014.
  */
-public final class PersonService {
+public class PersonService {
 
     public PersonService() {
 
@@ -82,7 +82,7 @@ public final class PersonService {
      * @param people Array of people to look for spouses in
      * @return Array of people with no spouses
      */
-    public static Person[] sameChildrenLists(Person[] people) {
+    public static Person[] removeSpouses(Person[] people) {
         Map<Integer, Person> personMap = toMap(people);
         for (Person p : people) {
             if (personMap.containsKey(p.getId()) && personMap.containsKey(p.getSpouseId())) {

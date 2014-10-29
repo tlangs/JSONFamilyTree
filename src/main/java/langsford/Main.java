@@ -36,6 +36,7 @@ public class Main {
         }
     }
 
+
     private static Options createOptions() {
         Options options = new Options();
         options.addOption("h", false, "get help");
@@ -48,11 +49,12 @@ public class Main {
     private static void displayHelp() {
         System.out.println("grandchildren [options] filename");
         System.out.println("Options:");
-        System.out.println("-i\t\t\t\t\tIdentical Spouse Lists." +
-                "\n\t\t\t\t\tAssume lists of children for spouses are identical.\n");
-        System.out.println("-h\t\t\t\t\tHelp\n\t\t\t\t\tDisplay this help screen.\n");
-        System.out.println("-f <filename> \t\t\t\tUnique Spouse Lists." +
-                "\n\t\t\t\t\tAssume lists of children for spouses are identical.\n");
+        System.out.println("-i\t\t\t\tIdentical Spouse Lists." +
+                "\n\t\t\t\tAssume lists of children for spouses are identical.\n");
+        System.out.println("-h\t\t\t\tHelp\n\t\t\t\tDisplay this help screen.\n");
+        System.out.println("-f <filename> \t\t\tUnique Spouse Lists." +
+                "\n\t\t\t\tAssume lists of children for spouses are identical." +
+                "\n\t\t\t\tIf lists are not identical, there is a possibility of miscounting.");
     }
 
 
@@ -87,7 +89,7 @@ public class Main {
 
 
     /**
-     * Removes spouses than calculates number of grandchildren
+     * Removes spouses then calculates number of grandchildren
      * @param line
      */
     private static void calculateIdenticalSpouseGrandchildren(
@@ -98,7 +100,7 @@ public class Main {
                 BufferedReader br = new BufferedReader(new FileReader(filename));
                 Gson gson = new Gson();
                 Person[] people = gson.fromJson(br, Person[].class);
-                Person[] noSpouses = PersonService.sameChildrenLists(people);
+                Person[] noSpouses = PersonService.removeSpouses(people);
                 Set<Person> totalGrandchildren = new HashSet<>();
                 for (Person person : noSpouses) {
                     Person[] grandchildren = PersonService.findGrandChildren(person, people);

@@ -2,7 +2,6 @@ package langsford.service;
 
 import com.google.gson.Gson;
 import langsford.dto.Person;
-import langsford.service.PersonService;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,7 +47,7 @@ public class PersonServiceTests {
             BufferedReader br = new BufferedReader(new FileReader("resources/test.txt"));
             Gson gson = new Gson();
             Person[] people = gson.fromJson(br, Person[].class);
-            Person[] noSpouses = PersonService.sameChildrenLists(people);
+            Person[] noSpouses = PersonService.removeSpouses(people);
             Set<Person> totalGrandchildren = new HashSet<>();
             for (Person person : noSpouses) {
                 Person[] grandchildren = PersonService.findGrandChildren(person, people);
