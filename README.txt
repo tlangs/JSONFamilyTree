@@ -1,13 +1,13 @@
 To run, execute:
-    java -jar grandchildren-1.0.jar -f <filename>
+    java -jar grandchildren.jar -f <filename>
 
 If spouses have identical children lists, then execute:
-    java -jar grandchildren-1.0.jar -i -f <filename>
+    java -jar grandchildren.jar -i -f <filename>
 for a minor speedup. It removes the redundant child id lists
 so they are not calculated.
 
 To access the help screen, execute:
-    java -jar grandchildren-1.0.jar -h
+    java -jar grandchildren.jar -h
 
 -----------------------------
 Gradle
