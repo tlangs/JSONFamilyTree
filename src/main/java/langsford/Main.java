@@ -56,6 +56,10 @@ public class Main {
     }
 
 
+    /**
+     * Calculate the number of grandchildren
+     * @param line
+     */
     private static void calculateGrandchildren(CommandLine line) {
         if (line.hasOption("f")) {
             String filename = line.getOptionValue("f");
@@ -81,6 +85,11 @@ public class Main {
 
     }
 
+
+    /**
+     * Removes spouses than calculates number of grandchildren
+     * @param line
+     */
     private static void calculateIdenticalSpouseGrandchildren(
             CommandLine line) {
         if (line.hasOption("f")) {
