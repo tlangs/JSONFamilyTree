@@ -13,7 +13,7 @@ To access the help screen, execute:
 Gradle
 -----------------------------
 If Gradle is installed, running 'gradle libjar' makes a jar file and puts it
-in build\libs. 'gradle test' runs the tests.
+in build/libs. 'gradle test' runs the tests.
 
 If gradle is not installed, running 'gradlew libjar' and 'gradlew test' will
 do the same as above, but it will first download the required files for it to work.
