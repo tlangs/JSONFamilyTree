@@ -4,7 +4,7 @@ To run, execute:
 If spouses have identical children lists, then execute:
     java -jar grandchildren.jar -i -f <filename>
 for a minor speedup. It removes the redundant child id lists
-so they are not calculated.
+so they are not calculated. Only use this if spouse children Id lists are identical.
 
 To access the help screen, execute:
     java -jar grandchildren.jar -h
