@@ -19,10 +19,14 @@ public class Main {
         CommandLineParser parser = new GnuParser();
         try {
             CommandLine line = parser.parse(options, args);
-            if (line.hasOption("h"))
+            if (line.hasOption("h")) {
                 displayHelp();
-            if (line.hasOption("i"))
+                return;
+            }
+
+            if (line.hasOption("i")) {
                 calculateIdenticalSpouseGrandchildren(line);
+            }
             else {
                 calculateGrandchildren(line);
             }
@@ -47,7 +51,7 @@ public class Main {
         System.out.println("-i\t\t\t\t\tIdentical Spouse Lists." +
                 "\n\t\t\t\t\tAssume lists of children for spouses are identical.\n");
         System.out.println("-h\t\t\t\t\tHelp\n\t\t\t\t\tDisplay this help screen.\n");
-        System.out.println("-f <filename> \t\tUnique Spouse Lists." +
+        System.out.println("-f <filename> \t\t\t\tUnique Spouse Lists." +
                 "\n\t\t\t\t\tAssume lists of children for spouses are identical.\n");
     }
 

@@ -1,0 +1,110 @@
+
+[
+    {
+        "id": 0,
+        "name": "Tanisha Hall",
+        "spouseId": 1,
+        "childrenIds": [
+            3,
+            4
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Charmaine Ware",
+        "spouseId": 0,
+        "childrenIds": [
+            3,
+            4
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ashley William",
+        "spouseId": 3,
+        "childrenIds": [
+        	6,
+        	8
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Randall Guzman",
+        "spouseId": 2,
+        "childrenIds": [
+        	6,
+        	8
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Daniels Franco",
+        "spouseId": 5,
+        "childrenIds": [
+            11
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Jacklyn Mccormick",
+        "spouseId": 4,
+        "childrenIds": [
+            11
+        ]
+    },{
+        "id": 6,
+        "name": "Mcneil House",
+        "spouseId": 7,
+        "childrenIds": []
+    },
+    {
+        "id": 7,
+        "name": "Kimberly Cochran",
+        "spouseId": 6,
+        "childrenIds": []
+    },
+    {
+        "id": 8,
+        "name": "Ginger Dorsey",
+        "spouseId": 9,
+        "childrenIds": [
+            16
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Raymond Mayer",
+        "spouseId": 8,
+        "childrenIds": [
+            16
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Janet Brennan",
+        "spouseId": 12,
+        "childrenIds": [
+            15
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Peters Mcdaniel",
+        "spouseId": 11,
+        "childrenIds": [
+            15
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Mclaughlin Brooks",
+        "spouseId": -1,
+        "childrenIds": []
+    },
+    {
+        "id": 16,
+        "name": "Knapp Velasquez",
+        "spouseId": -1,
+        "childrenIds": []
+    }
+]

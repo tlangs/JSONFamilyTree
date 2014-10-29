@@ -1,0 +1,56 @@
+[
+    {
+        "id": 0,
+        "name": "Tanisha Hall",
+        "spouseId": 1,
+        "childrenIds": [
+            3
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Charmaine Ware",
+        "spouseId": 0,
+        "childrenIds": [
+            3
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ashley William",
+        "spouseId": 3,
+        "childrenIds": [
+        	4
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Randall Guzman",
+        "spouseId": 2,
+        "childrenIds": [
+        	4
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Daniels Franco",
+        "spouseId": 5,
+        "childrenIds": [
+            
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Jacklyn Mccormick",
+        "spouseId": 4,
+        "childrenIds": [
+            11
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Janet Brennan",
+        "spouseId": -1,
+        "childrenIds": []
+    }
+]

@@ -44,6 +44,10 @@ public final class PersonService {
         // Getting the children of the person
         for (int x : person.getChildrenIds()) {
             children.add(personMap.get(x));
+            int spouseId = personMap.get(x).getSpouseId();
+            if (spouseId >= 0 ) {
+                  children.add(personMap.get(spouseId));
+            }
         }
 
         // Adding grandchildren to map
@@ -57,8 +61,11 @@ public final class PersonService {
 
         // adding spouses of grandchildren to map
         for (Person grandchild : grandchildren) {
-            Person spouse = personMap.get(grandchild.getSpouseId());
+            int spouseId = grandchild.getSpouseId();
+            if (grandchild.getSpouseId() >= 0) {
+                Person spouse = personMap.get(spouseId);
                 spouses.add(spouse);
+            }
         }
 
         for (Person spouse : spouses) {
@@ -77,14 +84,9 @@ public final class PersonService {
      */
     public static Person[] sameChildrenLists(Person[] people) {
         Map<Integer, Person> personMap = toMap(people);
-        List<Person> noSpouses = new ArrayList<>();
         for (Person p : people) {
             if (personMap.containsKey(p.getId()) && personMap.containsKey(p.getSpouseId())) {
-                int[] childrenList = p.getChildrenIds();
-                int[] spouseChildrenList = personMap.get(p.getSpouseId()).getChildrenIds();
-                if (Arrays.equals(childrenList, spouseChildrenList)) {
                     personMap.remove(p.getSpouseId());
-                }
             }
         }
         return personMap.values().toArray(new Person[personMap.size()]);
