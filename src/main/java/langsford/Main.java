@@ -22,20 +22,30 @@ public class Main {
             if (line.hasOption("h")) {
                 displayHelp();
                 return;
+            } else if (!line.hasOption("f")) {
+                System.err.println("A file must be provided");
+                return;
             }
-
+            String filename = line.getOptionValue("f");
+            BufferedReader br = new BufferedReader(new FileReader(filename));
+            Gson gson = new Gson();
+            Person[] people = gson.fromJson(br, Person[].class);
+            Set<Person> allGrandchildren = new HashSet<>();
             if (line.hasOption("i")) {
-                calculateIdenticalSpouseGrandchildren(line);
+                PersonService personService = new PersonService(people);
+                personService.removeSpouses();
+                allGrandchildren = personService.findAllGrandchildren();
+            } else {
+                PersonService personService = new PersonService(people);
+                allGrandchildren = personService.findAllGrandchildren();
             }
-            else {
-                calculateGrandchildren(line);
-            }
+            System.out.println("Total number of grandchildren found: " +
+                    allGrandchildren.size());
 
-        } catch (ParseException e) {
-            System.out.println("Unexpected exception:" + e.getMessage());
+        } catch (ParseException | FileNotFoundException e) {
+            System.err.println("Unexpected exception:" + e.getMessage());
         }
     }
-
 
     private static Options createOptions() {
         Options options = new Options();
@@ -55,63 +65,5 @@ public class Main {
         System.out.println("-f <filename> \t\t\tUnique Spouse Lists." +
                 "\n\t\t\t\tAssume lists of children for spouses are identical." +
                 "\n\t\t\t\tIf lists are not identical, there is a possibility of miscounting.");
-    }
-
-
-    /**
-     * Calculate the number of grandchildren
-     * @param line
-     */
-    private static void calculateGrandchildren(CommandLine line) {
-        if (line.hasOption("f")) {
-            String filename = line.getOptionValue("f");
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(filename));
-                Gson gson = new Gson();
-                Person[] people = gson.fromJson(br, Person[].class);
-                Set<Person> totalGrandchildren = new HashSet<>();
-                for (Person person : people) {
-                    Person[] grandchildren = PersonService.findGrandChildren(person, people);
-                    totalGrandchildren.addAll(Arrays.asList(grandchildren));
-                }
-                System.out.println("Total number of grandchildren found: " +
-                        totalGrandchildren.size());
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                System.err.println("Error: File not found!");
-            }
-        }
-        else {
-            System.err.println("File not provided");
-        }
-
-    }
-
-
-    /**
-     * Removes spouses then calculates number of grandchildren
-     * @param line
-     */
-    private static void calculateIdenticalSpouseGrandchildren(
-            CommandLine line) {
-        if (line.hasOption("f")) {
-            String filename = line.getOptionValue("f");
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(filename));
-                Gson gson = new Gson();
-                Person[] people = gson.fromJson(br, Person[].class);
-                Person[] noSpouses = PersonService.removeSpouses(people);
-                Set<Person> totalGrandchildren = new HashSet<>();
-                for (Person person : noSpouses) {
-                    Person[] grandchildren = PersonService.findGrandChildren(person, people);
-                    totalGrandchildren.addAll(Arrays.asList(grandchildren));
-                }
-                System.out.println("Total number of grandchildren found: " +
-                        totalGrandchildren.size());
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                System.err.println("Error: File not found!");
-            }
-        }
     }
 }

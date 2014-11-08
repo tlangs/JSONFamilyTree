@@ -9,8 +9,12 @@ import java.util.*;
  */
 public class PersonService {
 
-    public PersonService() {
+    private Map<Integer, Person> personMap;
+    private Person[] people;
 
+    public PersonService(Person[] people) {
+        this.personMap = toMap(people);
+        this.people = people;
     }
 
     /**
@@ -20,42 +24,51 @@ public class PersonService {
      */
     private static Map<Integer, Person> toMap(Person[] people) {
         Map<Integer, Person> peopleMap = new HashMap<Integer, Person>();
-        Iterator<Person> personIter = Arrays.asList(people).iterator();
-        while (personIter.hasNext()) {
-            Person p = personIter.next();
+        for (Person p : Arrays.asList(people)) {
             peopleMap.put(p.getId(), p);
         }
         return peopleMap;
     }
 
     /**
+     * Get rid of all spouses in the list
+     */
+    public void removeSpouses() {
+        Map<Integer, Person> noSpouses = toMap(this.people);
+        for (Person p : this.people) {
+            if (noSpouses.containsKey(p.getId()) && noSpouses.containsKey(p.getSpouseId())) {
+                noSpouses.remove(p.getSpouseId());
+            }
+        }
+        this.people = noSpouses.values().toArray(new Person[noSpouses.size()]);
+    }
+
+    /**
      * Finds all the grandchildren of the provided person in the provided
      * Array of People
      * @param person Person to find grandchildren of.
-     * @param people Array of People to find grandchildren in.
      * @return Array of all grandchildren of the provided Person.
      */
-    public static Person[] findGrandChildren(Person person, Person[] people) {
-        Map<Integer, Person> personMap = toMap(people);
+    private Person[] findGrandChildren(Person person) {
         List<Person> children = new ArrayList<>();
         List<Person> grandchildren = new ArrayList<>();
         List<Person> spouses = new ArrayList<>();
 
         // Getting the children of the person
         for (int x : person.getChildrenIds()) {
-            children.add(personMap.get(x));
-            int spouseId = personMap.get(x).getSpouseId();
+            children.add(this.personMap.get(x));
+            int spouseId = this.personMap.get(x).getSpouseId();
             if (spouseId >= 0 ) {
-                  children.add(personMap.get(spouseId));
+                  children.add(this.personMap.get(spouseId));
             }
         }
 
         // Adding grandchildren to map
         for (Person child : children) {
             for (int x : child.getChildrenIds()) {
-                Person grandchild = personMap.get(x);
+                Person grandchild = this.personMap.get(x);
                 if (!grandchildren.contains(grandchild.getId()))
-                    grandchildren.add(personMap.get(x));
+                    grandchildren.add(this.personMap.get(x));
             }
         }
 
@@ -63,7 +76,7 @@ public class PersonService {
         for (Person grandchild : grandchildren) {
             int spouseId = grandchild.getSpouseId();
             if (grandchild.getSpouseId() >= 0) {
-                Person spouse = personMap.get(spouseId);
+                Person spouse = this.personMap.get(spouseId);
                 spouses.add(spouse);
             }
         }
@@ -77,18 +90,14 @@ public class PersonService {
         return grandchildren.toArray(new Person[grandchildren.size()]);
     }
 
-    /**
-     * Get rid of all spouses in the list
-     * @param people Array of people to look for spouses in
-     * @return Array of people with no spouses
-     */
-    public static Person[] removeSpouses(Person[] people) {
-        Map<Integer, Person> personMap = toMap(people);
-        for (Person p : people) {
-            if (personMap.containsKey(p.getId()) && personMap.containsKey(p.getSpouseId())) {
-                    personMap.remove(p.getSpouseId());
-            }
+    public Set<Person> findAllGrandchildren() {
+        Set<Person> totalGrandchildren = new HashSet<>();
+        for (Person person : this.people) {
+            Person[] grandchildren = this.findGrandChildren(person);
+            totalGrandchildren.addAll(Arrays.asList(grandchildren));
         }
-        return personMap.values().toArray(new Person[personMap.size()]);
+        return totalGrandchildren;
     }
+
+
 }

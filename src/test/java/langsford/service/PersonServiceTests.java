@@ -10,8 +10,6 @@ import static org.junit.Assert.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -29,12 +27,10 @@ public class PersonServiceTests {
             BufferedReader br = new BufferedReader(new FileReader("resources/test2.txt"));
             Gson gson = new Gson();
             Person[] people = gson.fromJson(br, Person[].class);
-            Set<Person> totalGrandchildren = new HashSet<>();
-            for (Person person : people) {
-                Person[] grandchildren = PersonService.findGrandChildren(person, people);
-                totalGrandchildren.addAll(Arrays.asList(grandchildren));
-            }
-              assertEquals(3, totalGrandchildren.size());
+            PersonService personService = new PersonService(people);
+            Set<Person> totalGrandchildren = personService.findAllGrandchildren();
+
+            assertEquals(3, totalGrandchildren.size());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.err.println("Error: File not found!");
@@ -47,12 +43,10 @@ public class PersonServiceTests {
             BufferedReader br = new BufferedReader(new FileReader("resources/test.txt"));
             Gson gson = new Gson();
             Person[] people = gson.fromJson(br, Person[].class);
-            Person[] noSpouses = PersonService.removeSpouses(people);
-            Set<Person> totalGrandchildren = new HashSet<>();
-            for (Person person : noSpouses) {
-                Person[] grandchildren = PersonService.findGrandChildren(person, people);
-                totalGrandchildren.addAll(Arrays.asList(grandchildren));
-            }
+            PersonService personService = new PersonService(people);
+            personService.removeSpouses();
+            Set<Person> totalGrandchildren = personService.findAllGrandchildren();
+
             assertEquals(8, totalGrandchildren.size());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
